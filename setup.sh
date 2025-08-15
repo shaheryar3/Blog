@@ -14,7 +14,7 @@ command_exists() {
 # Check prerequisites
 echo "📋 Checking prerequisites..."
 
-if ! command_exists python; then
+if ! command_exists python3; then
     echo "❌ Python is not installed. Please install Python 3.8+ first."
     exit 1
 fi
@@ -34,7 +34,7 @@ echo "✅ All prerequisites are installed!"
 # Install Python dependencies
 echo ""
 echo "📦 Installing Python dependencies..."
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 if [ $? -ne 0 ]; then
     echo "❌ Failed to install Python dependencies"
